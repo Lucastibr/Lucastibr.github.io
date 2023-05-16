@@ -53,7 +53,6 @@ function generateMap() {
     map = new ol.Map({
         target: 'map',
         layers: [
-            // Aqui você pode adicionar camadas base ou outras camadas que desejar
             new ol.layer.Tile({
                 source: new ol.source.OSM()
             }),
