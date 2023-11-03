@@ -58,7 +58,7 @@ div.laptop-wrapper {
     padding-bottom: 67.5%;
     height: 0;
 }
-div.laptop-wrapper iframe {
+div.laptop-wrapper video {
     box-sizing: border-box;
     background: url(https://i.stack.imgur.com/zZNgk.png) center center no-repeat;
     background-size: contain;
