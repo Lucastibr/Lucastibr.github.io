@@ -6,6 +6,10 @@ $(function () {
 
     Fancybox.bind('[data-fancybox]', {
     });
+
+    
+    const listener = map.on('postcompose', moveIcon);
+    map.render();
 });
 
 
@@ -18,6 +22,7 @@ function generateMap() {
 
     vectorSource = new ol.source.Vector({});
 
+    var urls = ['./Galeria/bread.png','./Galeria/brocolli.png', './Galeria/milk.png'];
 
     coordinates.forEach(f => {
         var feature = new ol.Feature({
@@ -28,8 +33,8 @@ function generateMap() {
 
         var iconStyle = new ol.style.Style({
             image: new ol.style.Icon({
-                src: 'http://maps.google.com/mapfiles/ms/micons/blue.png', // Caminho para o ícone do marcador
-                scale: 0.5 // Escala do ícone do marcador
+                src: urls[count], // Caminho para o ícone do marcador
+                scale: 0.7 // Escala do ícone do marcador
             })
         });
 
@@ -60,7 +65,7 @@ function generateMap() {
         ],
         view: new ol.View({
             center: ol.proj.fromLonLat(coordinates[0]), // Coordenadas do centro do mapa
-            zoom: 5 // Nível de zoom inicial
+            zoom: 11 // Nível de zoom inicial
         })
     });
 
